@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<script>
+let dato1, dato2, num1, num2;
+dato1 = window.prompt("Introduce primer número ?", "0");
+num1 = parseInt(dato1);
+dato2 = window.prompt("Introduce segundo número ?", "0");
+num2 = parseInt(dato2);
+let resultado = num1 + num2;
+document.write(`<br/> <br/> La suma es ${resultado} ` );
+
+// Función para convertir Fahrenheit a Celsius
+function fahrenheitACelsius(f) {
+    return (f - 32) / 1.8;
+}
+
+// Ejemplo de uso de la función:
+let datoF = window.prompt("Introduce temperatura en ºF para convertir a ºC:", "32");
+let numF = parseFloat(datoF);
+let celsius = fahrenheitACelsius(numF);
+document.write(`<br/><br/>${numF} ºF son ${celsius} ºC`);
+</script>
+<p>Para sumar, las variable deben ser numéricas.</p>
+</body>
+</html>

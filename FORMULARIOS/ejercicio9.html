@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+     
+<p>Introduce dos notas y su valor ponderado:</p>
+<form id="formulario">
+    <label>Nota 1:</label>
+    <input type="number" id="nota1" step="any" required>
+    <label>Ponderación 1 (%):</label>
+    <input type="number" id="pond1" step="any" required>
+    <br><br>
+    <label>Nota 2:</label>
+    <input type="number" id="nota2" step="any" required>
+    <label>Ponderación 2 (%):</label>
+    <input type="number" id="pond2" step="any" required>
+    <br><br>
+    <button type="submit">Calcula</button>
+</form>
+<div id="salida"></div>
+
+<script>
+document.getElementById("formulario").onsubmit = function(e) {
+    e.preventDefault();
+    let nota1 = parseFloat(document.getElementById("nota1").value);
+    let pond1 = parseFloat(document.getElementById("pond1").value);
+    let nota2 = parseFloat(document.getElementById("nota2").value);
+    let pond2 = parseFloat(document.getElementById("pond2").value);
+
+    let media = (nota1 * pond1/100) + (nota2 * pond2/100);
+    document.getElementById("salida").innerHTML = `La nota media ponderada es: ${media}`;
+};
+</script>
+ 
+</body>
+</html>

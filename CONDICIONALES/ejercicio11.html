@@ -1,0 +1,52 @@
+Inicio
+ Declarar origen, destino, descuento
+ Leer "Introduce ciudad de origen", origen
+ Leer "Introduce ciudad de destino", destino
+ Si (origen = "Palma") entonces
+  Si (destino = "Barcelona") entonces
+   descuento = 5
+  Sino
+   Si (destino = "Madrid") entonces
+    descuento = 10
+   Sino
+    Si (destino = "Valencia") entonces
+     descuento = 15
+    Sino
+     descuento = 0
+    FinSi
+   FinSi
+  FinSi
+ Sino
+  descuento = 0
+ FinSi
+ Escribir "El descuento es: ", descuento, "%"
+Fin
+
+<!DOCTYPE html> 
+<html> 
+<head><meta charset="utf-8"></head> 
+<body> 
+     
+<p>innerHtml controla que puede incluirse en un elemento.</p> 
+<div id="salida"></div> 
+ 
+<script> 
+let origen = prompt("Introduce ciudad de origen:", "");
+let destino = prompt("Introduce ciudad de destino:", "");
+let descuento = 0;
+
+if (origen.toLowerCase() === "palma") {
+    if (destino.toLowerCase() === "barcelona") {
+        descuento = 5;
+    } else if (destino.toLowerCase() === "madrid") {
+        descuento = 10;
+    } else if (destino.toLowerCase() === "valencia") {
+        descuento = 15;
+    }
+}
+
+document.getElementById("salida").innerHTML = `El descuento es: ${descuento}%`;
+</script> 
+ 
+</body> 
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let mes = parseInt(prompt("Introduce el número del mes (1-12):", ""));
+let mensaje = "";
+
+if (mes >= 1 && mes <= 12) {
+    if (mes === 4 || mes === 6 || mes === 9 || mes === 11) {
+        mensaje = "El mes tiene 30 días.";
+    } else if (mes === 2) {
+        mensaje = "Febrero tiene 28 o 29 días.";
+    } else {
+        mensaje = "El mes tiene 31 días.";
+    }
+} else {
+    mensaje = "Número de mes no válido.";
+}
+
+document.write(mensaje);
+</script>
+</body>
+</html>

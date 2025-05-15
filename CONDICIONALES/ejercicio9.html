@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+<head><meta charset="utf-8"></head> 
+<body> 
+<p>innerHtml controla que puede incluirse en un elemento.</p> 
+<div id="salida"></div> 
+
+<script> 
+let salida = "";
+let esFP = prompt("¿Eres alumno de FP? (sí/no)", "sí");
+let edad = parseInt(prompt("¿Cuántos años tienes?", "0"));
+let marca = prompt("Introduce la marca del coche:", "");
+let modelo = prompt("Introduce el modelo del coche:", "");
+
+if (esFP.toLowerCase() === "sí" || esFP.toLowerCase() === "si") {
+    if (edad > 18) {
+        salida += "Bienvenid@<br>";
+    } else {
+        salida += "NO tienes acceso al portal web.<br>";
+    }
+}
+
+if (marca.toLowerCase() === "ford" && modelo.toLowerCase() === "fiesta") {
+    salida += "La marca es Ford y el modelo es Fiesta.<br>";
+}
+
+document.getElementById("salida").innerHTML = salida;
+</script> 
+
+</body> 
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let esFP = prompt("¿Eres alumno de FP? (sí/no)", "sí");
+let edad = parseInt(prompt("¿Cuántos años tienes?", "0"));
+let marca = prompt("Introduce la marca del coche:", "");
+let modelo = prompt("Introduce el modelo del coche:", "");
+
+if (esFP.toLowerCase() === "sí" || esFP.toLowerCase() === "si") {
+    if (edad > 18) {
+        document.write("Bienvenid@<br>");
+    } else {
+        document.write("NO tienes acceso al portal web.<br>");
+    }
+}
+
+if (marca.toLowerCase() === "ford" && modelo.toLowerCase() === "fiesta") {
+    document.write("La marca es Ford y el modelo es Fiesta.<br>");
+}
+</script>
+</body>
+</html>
+

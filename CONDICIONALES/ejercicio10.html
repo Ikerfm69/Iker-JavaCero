@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<head><meta charset="utf-8"></head> 
+<body> 
+     
+<p>innerHtml controla que puede incluirse en un elemento.</p> 
+<div id="salida"></div> 
+ 
+<script> 
+let edad = parseInt(prompt("Introduce tu edad:", "0"));
+let mensaje = "";
+
+if (edad >= 1 && edad <= 120) {
+    if (edad > 18) {
+        mensaje = "Sí tiene permiso de acceso";
+    } else {
+        mensaje = "No tiene permiso de acceso";
+    }
+} else {
+    mensaje = "Edad no válida. Debe estar entre 1 y 120 años.";
+}
+
+document.getElementById("salida").innerHTML = mensaje;
+</script> 
+ 
+</body> 
+</html>
